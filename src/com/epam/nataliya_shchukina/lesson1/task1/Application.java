@@ -1,5 +1,6 @@
 package com.epam.nataliya_shchukina.lesson1.task1;
 public class Application {
+
     public int [] arrayInitionalization( int size, int leftBorder, int rightBorder){
         //int size =20;
         int[] array = new int[size];
@@ -8,10 +9,14 @@ public class Application {
         }
         return array;
     }
+
     public void runApplication() {
-    ArrayProcessing arrayProcessing = new ArrayProcessing();
-    arrayProcessing.arrayOutput(arrayInitionalization(20,-10,10));
-    System.out.println();
-    //arrayProcessing.maxFound(array);
-}
+
+        ArrayProcessing arrayProcessing = new ArrayProcessing();
+        var array = arrayInitionalization(20, -10, 10);
+        arrayProcessing.arrayOutput(array);
+        System.out.println();
+        var negativeIndex = arrayProcessing.getMaxNegativeIndex(array);
+        System.out.println("Maxotr: " + array[negativeIndex] + " [" + negativeIndex + "]");
+    }
 }

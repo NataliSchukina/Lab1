@@ -7,16 +7,19 @@ public class ArrayProcessing {
                 System.out.print(array[i] + "[" + i + "]" + " ");
                 }
         }
-        public  void maxFound( int [] array) {
-            int maxotr = 0;
+
+        public int getMaxNegativeIndex(int[] array) {
+            boolean isFound = false;
+            int maxotr = array[0];
             int kmax = 0;
+
             for (int i = 0; i < array.length; i++) {
-                if ((Math.abs(array[i])> maxotr) & (array[i]<0)){
-                    maxotr = array [i];
+                if ((Math.abs(array[i]) <= Math.abs(maxotr)) & (array[i] < 0)) {
+                    maxotr = array[i];
                     kmax = i;
+                    isFound = true;
                 }
-
             }
-            System.out.println("Maxotr: "+maxotr+" ["+kmax+"]");
 
+            return kmax;
         }}
