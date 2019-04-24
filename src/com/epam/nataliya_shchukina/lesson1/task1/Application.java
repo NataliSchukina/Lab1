@@ -14,9 +14,15 @@ public class Application {
 
         ArrayProcessing arrayProcessing = new ArrayProcessing();
         var array = arrayInitionalization(20, -10, 10);
+        System.out.println("Original array:");
         arrayProcessing.arrayOutput(array);
         System.out.println();
         var negativeIndex = arrayProcessing.getMaxNegativeIndex(array);
         System.out.println("Maxotr: " + array[negativeIndex] + " [" + negativeIndex + "]");
+        var pozitiveIndex = arrayProcessing.getMinPozitiveIndex(array);
+        System.out.println("Minpol: " + array[pozitiveIndex] + " [" + pozitiveIndex + "]");
+        var newarray = arrayProcessing.changeElementInArray(array,negativeIndex,pozitiveIndex);
+        System.out.println("Modified array:");
+        arrayProcessing.arrayOutput(newarray);
     }
 }
