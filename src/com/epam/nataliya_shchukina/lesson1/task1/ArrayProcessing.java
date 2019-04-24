@@ -12,15 +12,13 @@ public class ArrayProcessing {
         boolean isFound = false;
         int maxotr = array[0];
         int kmax = 0;
-
         for (int i = 0; i < array.length; i++) {
-            if ((Math.abs(array[i]) <= Math.abs(maxotr)) & (array[i] < 0)) {
+            if ((Math.abs(array[i])<= Math.abs(maxotr) ) & (array[i] < 0)){
                 maxotr = array[i];
                 kmax = i;
                 isFound = true;
             }
         }
-
         return kmax;
     }
 
@@ -30,7 +28,7 @@ public class ArrayProcessing {
         int lmax = 0;
 
         for (int i = 0; i < array.length; i++) {
-            if ((Math.abs(array[i]) <= Math.abs(minpol)) & (array[i] > 0)) {
+          if ((Math.abs(array[i]) <= Math.abs(minpol)) & (array[i] > 0)) {
                 minpol = array[i];
                 lmax = i;
                 isFound = true;
